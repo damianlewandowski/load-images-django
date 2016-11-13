@@ -1,2 +1,3 @@
-width: {{ width }}
-height: {{ height }}
+{% load static %}
+<img src="{% static "dummy_images/images/" %}{{ img.image.url }}"
+     width="{{ width }}" height="{{ height }}">

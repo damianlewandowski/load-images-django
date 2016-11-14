@@ -16,8 +16,8 @@ class ImageView(ListView):
         height = self.kwargs['resolution'].split('x')[1]
 
         dummy_images = DummyImage.objects.all()
-        dummy_images_counter = DummyImage.objects.all().count(),
-        
+        dummy_images_counter = DummyImage.objects.all().count()
+
         random_image = get_object_or_404(DummyImage, pk=dummy_images[random.randrange(0, dummy_images_counter)].id)
         context = {'width': width, 'height': height, 'img': random_image, 'test': 'test'}
 
